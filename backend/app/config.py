@@ -19,6 +19,10 @@ class Settings(BaseSettings):
     smarty_auth_token: str = ""
     smarty_license: str = ""
 
+    # Nominatim / OpenStreetMap (free, no key). User-Agent is required by policy.
+    nominatim_url: str = "https://nominatim.openstreetmap.org"
+    nominatim_user_agent: str = "name-address-parser/1.0 (contact: nolanle@gmail.com)"
+
     cors_origins: str = "http://localhost:5173,http://localhost:3000,http://localhost:8081,http://localhost:19006"
 
     @property

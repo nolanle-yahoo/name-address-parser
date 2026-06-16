@@ -48,6 +48,7 @@ USPS-standardized form. Providers are pluggable via `ADDRESS_VALIDATOR`:
 | Mock (default) | `mock` | nothing | offline structural checks — runs out of the box, **not USPS-verified** |
 | USPS Web Tools | `usps` | `USPS_USER_ID` | free; official USPS address standardization |
 | Smarty | `smarty` | `SMARTY_AUTH_ID`, `SMARTY_AUTH_TOKEN` | DPV deliverability + standardization |
+| Nominatim (OpenStreetMap) | `nominatim` | none (set `NOMINATIM_USER_AGENT`) | Free & keyless; OSM **geocoding** match — confirms the address exists, **not** USPS deliverability |
 
 If a provider is selected but credentials are missing, it degrades gracefully to
 the mock validator.
